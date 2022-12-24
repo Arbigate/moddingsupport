@@ -1,12 +1,28 @@
 manual_exceptions = {
-    'lux': 1
+    'lux': 1,
+    'qui': 7,
+    'enb,light': 1,
+    'sky,idles': 1,
+    'nordic,ui': 1,
+    'ebony,knight,armor': 1,
+    'animated,poisons': 1,
+    'static,mesh,improvement,mod,improvement,mod': 2,
+    'proteus': 1
 }
 
 false_nsfw_flagged = {
-    'enhanced blood textures':'https://www.nexusmods.com/skyrimspecialedition/mods/2357',
-    'glenmoril':'https://www.nexusmods.com/skyrimspecialedition/mods/32998',
-    'vigilant':'https://www.nexusmods.com/skyrimspecialedition/mods/11849/',
-    'sky idles':'https://www.nexusmods.com/skyrimspecialedition/mods/45794',
+    'enhanced blood textures': 'https://www.nexusmods.com/skyrimspecialedition/mods/2357',
+    'glenmoril': 'https://www.nexusmods.com/skyrimspecialedition/mods/32998',
+    'vigilant': 'https://www.nexusmods.com/skyrimspecialedition/mods/11849/',
+    'wico': 'https://www.nexusmods.com/skyrimspecialedition/mods/2136',
+    'maximum carnage': 'https://www.nexusmods.com/skyrimspecialedition/mods/43494',
+    'fallrim': 'https://www.nexusmods.com/skyrimspecialedition/mods/5031',
+    'xpmsse': 'https://www.nexusmods.com/skyrimspecialedition/mods/1988',
+    'dummy thicc - flame atronach': 'https://www.nexusmods.com/skyrimspecialedition/mods/43408',
+    'highly improved male body overhaul': 'https://www.nexusmods.com/skyrimspecialedition/mods/46311',
+    'himbo': 'https://www.nexusmods.com/skyrimspecialedition/mods/46311',
+    'gorecap': 'https://www.nexusmods.com/skyrimspecialedition/mods/16440',
+    'dx celes nightingale': 'https://www.nexusmods.com/skyrimspecialedition/mods/4529',
 }
 
 common_acronyms = {
@@ -22,7 +38,10 @@ common_acronyms = {
     'mbo': 'Movement Behavior Overhaul',
     'jbo': 'Jump Behavior Overhaul',
     'tdm': 'True Directional Movement',
-    'dar': 'Dynamic Animation Replacer'
+    'dar': 'Dynamic Animation Replacer',
+    'vanilla enb': 'The Vanilla ENB',
+    'scar': 'scar - skyrim combos ai revolution',
+    'heart,breaker': 'Heart Breaker - A Killmove Mod'
 }
 
 sos_acronym = {

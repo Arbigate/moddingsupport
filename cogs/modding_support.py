@@ -34,7 +34,7 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='source')
     async def source(self, ctx):
-        embed = discord.Embed(description='[Source Code](https://github.com/Geborgen/moddingsupport)', color=0x197482)
+        embed = discord.Embed(description='[Source Code](https://github.com/Arbigate/moddingsupport)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='guide')

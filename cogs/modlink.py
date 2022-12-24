@@ -152,9 +152,18 @@ class ModLinkSearch(commands.Cog):
         else:
             await self.search_nexus_for_query(ctx, queries)
 
+    @link.error
+    async def link_error(self, ctx, error):
+        if isinstance(error, commands.MissingRequiredArgument):
+            await ctx.send(content="Please provide a mod name when using the link command.")
+
+
     @commands.hybrid_command(name='suggest-acronym')
     async def suggest_acronym(self, ctx, acronym, *, mod_name):
         queries = []
+
+        if acronym in common_acronyms:
+            return await ctx.send(content="That acronym already exists.", ephemeral=True)
         if 2 < len(acronym) < 10:
             if 2 < len(parse_query(mod_name)) < 100:
                 queries.append(parse_query(mod_name.strip()))
@@ -221,12 +230,16 @@ class AcronymSuggestionButtons(discord.ui.View):
 
         view = AcronymApprovalButtons(embed_content)
         view.message = await self.architect_channel.send(embed=acronym_request_embed, view=view)
+        self.clear_items()
+        await self.message.edit(view=self)
         await interaction.response.send_message(content="Your request has be submitted for approval. Thank you!", ephemeral=True)
 
 
 
     @discord.ui.button(label="No", style=discord.ButtonStyle.gray)
     async def suggestion_button_no(self, interaction: discord.Interaction, button: discord.ui.Button):
+        self.clear_items()
+        await self.message.edit(view=self)
         await interaction.response.send_message(content="Your request has been canceled.", ephemeral=True)
 
 
