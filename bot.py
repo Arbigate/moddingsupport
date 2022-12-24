@@ -31,7 +31,7 @@ from cogs.modding_support import HelpCommand
 load_dotenv()
 extensions = ['cogs.modlink', 'cogs.modding_support']
 ERROR_CHANNEL_ID = 1056028135377874954
-ARCHITECT_CHANNEL = 1056028387413590056
+ARCHITECT_CHANNEL = 806307229182984202
 
 
 class ModLink(commands.Bot):

@@ -139,7 +139,7 @@ class ModLinkSearch(commands.Cog):
             view = ModLinkButtons(self.bot.error_channel)
             view.message = await ctx.send(embed=embed, view=view, ephemeral=False)
 
-    @commands.hybrid_command(name='link')
+    @commands.hybrid_command(name='link', description='Searches Nexus for input and provides mod link.')
     async def link(self, ctx, *, query):
         queries = []
         raw_queries = query.split(',')
@@ -158,7 +158,7 @@ class ModLinkSearch(commands.Cog):
             await ctx.send(content="Please provide a mod name when using the link command.")
 
 
-    @commands.hybrid_command(name='suggest-acronym')
+    @commands.hybrid_command(name='suggest-acronym', description='Suggest an acronym for the mod linking function to recognize')
     async def suggest_acronym(self, ctx, acronym, *, mod_name):
         queries = []
 
