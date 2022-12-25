@@ -7,7 +7,7 @@ Originally built for the [r/skyrim Discord server](https://discord.com/invite/sk
 
 # Nexus Search
 To use the Nexus search functionality, input your query using {curly brackets} like so:
-![foxdemo](https://i.imgur.com/NeKy9Qc.png) 
+![foxdemo](https://i.imgur.com/9c5WVzf.png)
 
 Click the ? to report an error and the X to delete the embed.
 
@@ -16,7 +16,7 @@ NSFW results will not appear.
 The search functionality was built conforming with Nexus's API and is fully legal and open source. It will NEVER allow pirated content to be shown. Message Geborgen#5954 or Arbigate#6162 with any concerns.
 
 # Support Commands
-The prefix is ``-`` and is currently unchangeable.
+The prefix is ``-`` and is currently unchangeable. All text commands are also available as slash commands.
 
    * -guide (beginner's modding guide)
    * -skse (SKSE tutorial)
