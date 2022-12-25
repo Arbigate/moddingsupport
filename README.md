@@ -3,7 +3,7 @@ Discord bot providing Nexus search functionality based off the r/skyrimmods modl
 
 Originally built for the [r/skyrim Discord server](https://discord.com/invite/skyrim), the bot is now open for public use.
 
-[Direct invite link](https://discord.com/api/oauth2/authorize?client_id=910688719097430066&permissions=274877925376&scope=bot)
+[Direct Invite Link](https://discord.com/api/oauth2/authorize?client_id=910688719097430066&permissions=274877925376&scope=bot) | [Top.gg Link](https://top.gg/bot/910688719097430066)
 
 The code core and linking function was made by Arbigate, with other commands and documentation by Geborgen.
 
