@@ -5,15 +5,18 @@ Originally built for the [r/skyrim Discord server](https://discord.com/invite/sk
 
 [Direct invite link](https://discord.com/api/oauth2/authorize?client_id=910688719097430066&permissions=274877925376&scope=bot)
 
+The code core and linking function was made by Arbigate, with other commands and documentation by Geborgen.
+
 # Nexus Search
 To use the Nexus search functionality, input your query using {curly brackets} like so:
-![foxdemo](https://i.imgur.com/9c5WVzf.png)
 
-Click the ? to report an error and the X to delete the embed.
+![foxdemo](https://i.imgur.com/susC6UO.png)
+
+Click the X to delete the embed and the ? to report an error.
 
 NSFW results will not appear.
 
-The search functionality was built conforming with Nexus's API and is fully legal and open source. It will NEVER allow pirated content to be shown. Message Geborgen#5954 or Arbigate#6162 with any concerns.
+The search functionality was built conforming with Nexus's API and is fully legal and open source. It will NEVER allow pirated content to be shown.
 
 # Support Commands
 The prefix is ``-`` and is currently unchangeable. All text commands are also available as slash commands.
