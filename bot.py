@@ -78,4 +78,4 @@ async def sync(ctx):
     print(x)
     await ctx.send("Bot synced!")
 
-bot.run(os.getenv("TOKEN"))
+bot.run(os.getenv("DISCORD_TOKEN"))
