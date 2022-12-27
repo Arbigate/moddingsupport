@@ -5,7 +5,7 @@ Originally built for the [r/skyrim Discord server](https://discord.com/invite/sk
 
 [Direct Invite Link](https://discord.com/api/oauth2/authorize?client_id=910688719097430066&permissions=274877925376&scope=bot) | [Top.gg Link](https://top.gg/bot/910688719097430066)
 
-The code core and linking function was made by Arbigate, with other commands and documentation by Geborgen.
+The code was made by Arbigate while the contents of the support commands and Github documentation were made by Geborgen.
 
 # Nexus Search
 To use the Nexus search functionality, input your query using {curly brackets} like so:
