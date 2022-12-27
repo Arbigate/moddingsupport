@@ -40,8 +40,9 @@ common_acronyms = {
     'tdm': 'True Directional Movement',
     'dar': 'Dynamic Animation Replacer',
     'vanilla enb': 'The Vanilla ENB',
-    'scar': 'scar - skyrim combos ai revolution',
-    'heart,breaker': 'Heart Breaker - A Killmove Mod'
+    'scar': 'scar - Skyrim Combos AI Revolution',
+    'heart breaker': 'Heart Breaker - A Killmove Mod',
+    'dyndolod 3': 'DynDOLOD 3 Alpha'
 }
 
 sos_acronym = {

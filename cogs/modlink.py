@@ -58,7 +58,7 @@ def find_queries(msg):
             return queries
         else:
             if 2 < len(parse_query(query)) < 100:
-                queries.append(parse_query(query))
+                queries.append(query)
     return queries
 
 
@@ -98,7 +98,7 @@ class ModLinkSearch(commands.Cog):
                     no_result_info = {"No results": game_id}
                     search_results.append(no_result_info)
         if len(search_results) <= 2:  # Uses a more efficient embed layout for single-query searches.
-            embed = discord.Embed(title=f"Search results for: '{queries[0].replace(',', ' ')}'", color=0x197482)
+            embed = discord.Embed(title=f"Search results for: '{queries[0]}'", color=0x197482)
             for results in search_results:
                 if "No results" in results.keys():  # Executes if either SE or LE search result is blank
                     if results['No results'] == 1704:
@@ -114,9 +114,9 @@ class ModLinkSearch(commands.Cog):
             iterations_counter = 0  # Counter used to position embed fields and used instead of passing 'query'.
             for results in search_results:
                 if (iterations_counter % 2 == 0) and iterations_counter == 0:  # Adds initial embed break.
-                    embed.add_field(name=f"Search results for:", value=f"**'{queries[iterations_counter].replace(',', ' ')}'**", inline=False)
+                    embed.add_field(name=f"Search results for:", value=f"**'{queries[iterations_counter]}'**", inline=False)
                 if (iterations_counter % 2 == 0) and iterations_counter > 0:  # Adds new embed break every two results.
-                    embed.add_field(name=f"Search results for:", value=f"**'{queries[int(iterations_counter/2)].replace(',', ' ')}'**", inline=False)
+                    embed.add_field(name=f"Search results for:", value=f"**'{queries[int(iterations_counter/2)]}'**", inline=False)
                 if "No results" in results.keys():  # Executes if either SE or LE search result is blank
                     if results['No results'] == 1704:
                         embed.add_field(name="Special Edition", value="No results", inline=True)
@@ -145,7 +145,7 @@ class ModLinkSearch(commands.Cog):
         raw_queries = query.split(',')
         for query in raw_queries:
             if 2 < len(parse_query(query)) < 100:
-                queries.append(parse_query(query.strip()))
+                queries.append(query.strip())
         if len(queries) > 5:
             embed = discord.Embed(description="You cannot link more than 5 mods in a message.", color=0x197482)
             await ctx.send(embed=embed)
@@ -164,9 +164,9 @@ class ModLinkSearch(commands.Cog):
 
         if acronym in common_acronyms:
             return await ctx.send(content="That acronym already exists.", ephemeral=True)
-        if 2 < len(acronym) < 10:
+        if 2 < len(acronym) < 15:
             if 2 < len(parse_query(mod_name)) < 100:
-                queries.append(parse_query(mod_name.strip()))
+                queries.append(mod_name.strip())
                 await self.search_nexus_for_query(ctx, queries, acronym=acronym)
             else:
                 await ctx.send(content="The mod name you have entered is too long.", ephemeral=True)
