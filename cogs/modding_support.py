@@ -165,7 +165,7 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='ussep', description='Link to USSEP')
     async def ussep(self, ctx):
-        embed = discord.Embed(title='Unofficial Skyrim Special Edition Patch', description='[USSEP Download](https://www.nexusmods.com/skyrimspecialedition/mods/266) \n[Old Version (pre-AE)](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=209150&game_id=1704) \n[Non-Arthmoor Alternatives](https://www.reddit.com/r/skyrimmods/comments/usamua/unarthmoored_ussep_compendium/)', color=0x197482)
+        embed = discord.Embed(title='Unofficial Skyrim Special Edition Patch', description='[USSEP Download](https://www.nexusmods.com/skyrimspecialedition/mods/266) \n[Old Version (1.6.353)](https://www.nexusmods.com/skyrimspecialedition/mods/266?tab=files&file_id=292193) \n[Older Version (1.5.97)](https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=209150&game_id=1704) \n[Non-Arthmoor Alternatives](https://www.reddit.com/r/skyrimmods/comments/usamua/unarthmoored_ussep_compendium/)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='tudm', description='Link to TUDM')
