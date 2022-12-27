@@ -1,12 +1,12 @@
 manual_exceptions = {
     'lux': 1,
     'qui': 7,
-    'enb,light': 1,
-    'sky,idles': 1,
-    'nordic,ui': 1,
-    'ebony,knight,armor': 1,
-    'animated,poisons': 1,
-    'static,mesh,improvement,mod,improvement,mod': 2,
+    'enb light': 1,
+    'sky idles': 1,
+    'nordic ui': 1,
+    'ebony knight armor': 1,
+    'animated poisons': 1,
+    'static mesh improvement mod improvement mod': 2,
     'proteus': 1
 }
 
