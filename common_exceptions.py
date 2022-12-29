@@ -42,7 +42,8 @@ common_acronyms = {
     'vanilla enb': 'The Vanilla ENB',
     'scar': 'scar - Skyrim Combos AI Revolution',
     'heart breaker': 'Heart Breaker - A Killmove Mod',
-    'dyndolod 3': 'DynDOLOD 3 Alpha'
+    'dyndolod 3': 'DynDOLOD 3 Alpha',
+    'cocks': 'Constructible Object Custom Keyword System'
 }
 
 sos_acronym = {

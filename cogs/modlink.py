@@ -58,7 +58,7 @@ def find_queries(msg):
             return queries
         else:
             if 2 < len(parse_query(query)) < 100:
-                queries.append(query)
+                queries.append(query.strip())
     return queries
 
 
@@ -88,7 +88,7 @@ class ModLinkSearch(commands.Cog):
                 if query.lower() in false_nsfw_flagged.keys():
                     resp = await self.bot.request_handler.search_mods(query=query, game_id=game_id, include_adult=True)
                 if query.lower() in common_acronyms.keys():
-                    resp = await self.bot.request_handler.search_mods(query=common_acronyms[query], game_id=game_id, include_adult=False)
+                    resp = await self.bot.request_handler.search_mods(query=common_acronyms[query.lower()], game_id=game_id, include_adult=False)
                 if resp['total'] >= 1:  # "Total" is the number of results nexus recognized.
                     if query.lower() in manual_exceptions.keys():
                         search_results.append(resp['results'][manual_exceptions[query.lower()]])
