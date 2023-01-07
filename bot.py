@@ -29,7 +29,7 @@ from nexus_search import RequestHandler
 from cogs.modding_support import HelpCommand
 
 load_dotenv()
-extensions = ['cogs.modlink', 'cogs.modding_support']
+extensions = ['cogs.modlink', 'cogs.modding_support', 'cogs.bot_battle_commands']
 ERROR_CHANNEL_ID = 1056028135377874954
 ARCHITECT_CHANNEL = 806307229182984202
 

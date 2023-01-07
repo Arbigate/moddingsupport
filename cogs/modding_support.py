@@ -228,13 +228,13 @@ class HelpCommand(commands.DefaultHelpCommand):
     def __init__(self):
         super().__init__()
         self.page_number = 0
-        self.help_body = ["-guide (beginner's modding guide) \n-skse (SKSE tutorial) \n-ae (information about AE) \n-downgrade (downgrading game tutorial) \n-version (breaks down the versions of the game) \n-porting / -converting (tutorial for porting mods) \n-crash (what to do in the event of a crash) \n-modmanager (mod manager comparison) \n-reinstall (how to correctly reinstall the game) \n-laws (10 Commandments of Modding™️)", "-nemesis (tutorial for Nemesis engine) \n-dyndolod (tutorial for DynDOLOD) \n-cleaning (xEdit plugin cleaning) \n-navmesh (fixing deleted navmesh) \n-eslify (ESL flagging plugins) \n-vanillastart (broken vanilla intro fix) \n-darkface (dark face bug fix) \n-loadorder / -loot (load order resources) \n-corrupt / -fallrim (corrupted save game resources)", "-essentials (list of essential mods) \n-script (script info board) \n-modlimit (mod limit info board) \n-enb (ENB info board) \n-ini (ini resources) \n-modlist (modlist sharing resources) \n-ussep (link to USSEP) \n-tudm (link to TUDM) \n-synthesis (link to Synthesis patcher) \n-xbox (Xbox mod recommendations) \n-ps4 (PlayStation mod recommendations)", "-sinitar (essay on Sinitar) \n-sos (returns a random 'SOS' mod) \n-gamepass (SKSE does not work with it) \n-rtfm (read the [redacted] manual) \n-tryitandsee (please do this) \n-dontasktoask (seriously, just ask your question) \n-stefan (ignore him) \n-source (links bot source code) \n/link (links mods, separate multiple with commas) \n/suggest-acronym (requests acronym to be added to mod linking"]
+        self.help_body = ["-guide (beginner's modding guide) \n-skse (SKSE tutorial) \n-ae (information about AE) \n-downgrade (downgrading game tutorial) \n-version (breaks down the versions of the game) \n-porting / -converting (tutorial for porting mods) \n-crash (what to do in the event of a crash) \n-modmanager (mod manager comparison) \n-reinstall (how to correctly reinstall the game) \n-laws (10 Commandments of Modding™️)", "-nemesis (tutorial for Nemesis engine) \n-dyndolod (tutorial for DynDOLOD) \n-cleaning (xEdit plugin cleaning) \n-navmesh (fixing deleted navmesh) \n-eslify (ESL flagging plugins) \n-vanillastart (broken vanilla intro fix) \n-darkface (dark face bug fix) \n-loadorder / -loot (load order resources) \n-corrupt / -fallrim (corrupted save game resources)", "-essentials (list of essential mods) \n-script (script info board) \n-modlimit (mod limit info board) \n-enb (ENB info board) \n-ini (ini resources) \n-modlist (modlist sharing resources) \n-ussep (link to USSEP) \n-tudm (link to TUDM) \n-synthesis (link to Synthesis patcher) \n-xbox (Xbox mod recommendations) \n-ps4 (PlayStation mod recommendations)", "-sinitar (essay on Sinitar) \n-sos (returns a random 'SOS' mod) \n-gamepass (SKSE does not work with it) \n-rtfm (read the [redacted] manual) \n-tryitandsee (please do this) \n-dontasktoask (seriously, just ask your question) \n-stefan (ignore him) \n-source (links bot source code) \n/link (links mods, separate multiple with commas) \n/suggest-acronym (requests acronym to be added to mod linking", "/attack (attacks the Augur of Dunlain bot) \n/damage-leaderboard (shows top 10 attackers against Augur of Dunlain) \n/check-damage (checks how much damage has been done to Augur of Dunlain)"]
 
     async def send_bot_help(self, mapping: Mapping[Optional[commands.Cog], List[commands.Command]]):
         view = HelpButtons(HelpCommand())
         ctx = self.context
         embed = discord.Embed(title="Modding Support Help", description=self.help_body[0], color=0x197482)
-        embed.set_footer(text="Page 1/4 | Use /ping to return latency")
+        embed.set_footer(text="Page 1/5 | Use /ping to return latency")
         view.message = await ctx.send(embed=embed, view=view)
 
 
@@ -254,17 +254,17 @@ class HelpButtons(discord.ui.View):
         if self.help_command.page_number > 0:
             self.help_command.page_number -= 1
             embed = discord.Embed(title="Modding Support Help", description=self.help_command.help_body[self.help_command.page_number], color=0x197482)
-            embed.set_footer(text=f"Page {self.help_command.page_number + 1}/4 | Use /ping to return latency")
+            embed.set_footer(text=f"Page {self.help_command.page_number + 1}/5 | Use /ping to return latency")
             await interaction.response.edit_message(embed=embed)
         else:
             await interaction.response.defer()
 
     @discord.ui.button(label="Next Page ▶", style=discord.ButtonStyle.gray)
     async def help_button_right(self, interaction: discord.Interaction, button: discord.ui.Button):
-        if self.help_command.page_number < 3:
+        if self.help_command.page_number < 4:
             self.help_command.page_number += 1
             embed = discord.Embed(title="Modding Support Help", description=self.help_command.help_body[self.help_command.page_number], color=0x197482)
-            embed.set_footer(text=f"Page {self.help_command.page_number + 1}/4 | Use /ping to return latency")
+            embed.set_footer(text=f"Page {self.help_command.page_number + 1}/5 | Use /ping to return latency")
             await interaction.response.edit_message(embed=embed)
         else:
             await interaction.response.defer()
