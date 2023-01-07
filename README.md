@@ -60,3 +60,6 @@ The prefix is ``-`` and is currently unchangeable. All text commands are also av
    * -stefan (ignore him)
    * -link (searches for and links mods)
    * -suggest-acronym (submits acronym addition request for mod linking)
+   * -attack (attacks the Augur of Dunlain bot)
+   * -damage-leaderboard (shows top 10 attackers against Augur of Dunlain)
+   * -check-damage (checks how much damage has been done to Augur of Dunlain)
