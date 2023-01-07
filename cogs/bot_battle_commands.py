@@ -44,8 +44,8 @@ class BotBattles(commands.Cog):
         embed.set_footer(text=f'Total Damage Inflicted: {attack_counter}')
         await ctx.send(embed=embed, ephemeral=True)
 
-    @commands.hybrid_command(name='check-attack', description='Checks how much damage has been inflicted on Augur of Dunlain.')
-    async def check_attack(self, ctx):
+    @commands.hybrid_command(name='check-damage', description='Checks how much damage has been inflicted on Augur of Dunlain.')
+    async def check_damage(self, ctx):
         embed = discord.Embed(description=f"{attack_counter} damage done to Augur of Dunlain so far!", color=0x197482)
         await ctx.send(embed=embed)
 

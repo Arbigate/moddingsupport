@@ -62,4 +62,4 @@ The prefix is ``-`` and is currently unchangeable. All text commands are also av
    * -suggest-acronym (submits acronym addition request for mod linking)
    * -attack (attacks the Augur of Dunlain bot)
    * -attack-leaderboard (shows top 10 attackers against Augur of Dunlain)
-   * -check-attack (checks how much damage has been done to Augur of Dunlain)
+   * -check-damage (checks how much damage has been done to Augur of Dunlain)
