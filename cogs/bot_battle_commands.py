@@ -41,12 +41,15 @@ class BotBattles(commands.Cog):
         attack_counter += 1
         attack_info[ctx.author.id] = attack_info.get(ctx.author.id, 0) + 1
         embed = discord.Embed(description=f"\U0001f5e1 Augur of Dunlain took 1 point of damage!", color=0x197482)
-        embed.set_footer(text=f'Total Damage Inflicted: {attack_counter}')
+        embed.set_footer(text=f'You have inflicted {attack_info[ctx.author.id]} damage total!')
         await ctx.send(embed=embed, ephemeral=True)
 
     @commands.hybrid_command(name='check-damage', description='Checks how much damage has been inflicted on Augur of Dunlain.')
     async def check_damage(self, ctx):
-        embed = discord.Embed(description=f"{attack_counter} damage done to Augur of Dunlain so far!", color=0x197482)
+        if ctx.author.id in attack_info.keys():
+            embed = discord.Embed(description=f"{attack_counter} damage total dealt to Augur of Dunlain so far. *You* dealt {attack_info[ctx.author.id]} point(s) of that!", color=0x197482)
+        else:
+            embed = discord.Embed(description=f"{attack_counter} damage total dealt to Augur of Dunlain so far. Use `/attack` with this bot to join in!", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='attack-leaderboard', description='Returns the leaderboard for attacks against Augur of Dunlain.')
