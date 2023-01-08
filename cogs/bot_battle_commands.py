@@ -19,8 +19,8 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 import discord
 from discord.ext import tasks, commands
 
-attack_counter = 0
-attack_info = {}
+attack_counter = 4
+attack_info = {668828647653638174: 2, 183867906386296833: 1, 707584186273366107: 1}
 
 
 def is_verified(ctx):
