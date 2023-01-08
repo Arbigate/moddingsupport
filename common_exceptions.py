@@ -61,7 +61,8 @@ common_acronyms = {
     'scar': 'scar - Skyrim Combos AI Revolution',
     'heart breaker': 'Heart Breaker - A Killmove Mod',
     'dyndolod 3': 'DynDOLOD 3 Alpha',
-    'cocks': 'Constructible Object Custom Keyword System'
+    'cocks': 'Constructible Object Custom Keyword System',
+    'jop': 'Joy of Perspective'
 }
 
 sos_acronym = {
