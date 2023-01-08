@@ -23,6 +23,10 @@ attack_counter = 0
 attack_info = {}
 
 
+def is_verified(ctx):
+    return ctx.author.id == 668828647653638174
+
+
 async def sort_leaderboard():
     sorted_leaderboard = sorted(attack_info.items(), key=lambda x: x[1], reverse=True)
     return sorted_leaderboard
@@ -69,6 +73,13 @@ class BotBattles(commands.Cog):
                 embed.set_footer(text=f'Your rank: {all_places}/{len(sorted_leaderboard)} ㅣ Your % Contribution: {round((attack_info[ctx.author.id]/attack_counter)*100, 1)}%')
                 break
         await ctx.send(embed=embed)
+
+    @commands.command(name='backup-attack-leaderboard')
+    @commands.check(is_verified)
+    async def backup_attack_leaderboard(self, ctx):
+        tracking_channel = self.bot.get_channel(1061109702248910898) or await self.bot.fetch_channel(1061109702248910898)
+        await tracking_channel.send(f'**----------Total attacks: {attack_counter}----------**')
+        await tracking_channel.send(attack_info)
 
     @tasks.loop(hours=8)
     async def attack_track(self):

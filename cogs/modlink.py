@@ -84,16 +84,17 @@ class ModLinkSearch(commands.Cog):
         search_results = []
         for query in queries:  # This is where the nexus endpoint is utilized, and result data is obtained.
             for game_id in games.keys():
+                if query.lower() in manual_exceptions.keys():
+                    search_results.append(manual_exceptions[query.lower()][0])
+                    search_results.append(manual_exceptions[query.lower()][1])
+                    break
                 resp = await self.bot.request_handler.search_mods(query=query, game_id=game_id, include_adult=False)
                 if query.lower() in false_nsfw_flagged.keys():
                     resp = await self.bot.request_handler.search_mods(query=query, game_id=game_id, include_adult=True)
                 if query.lower() in common_acronyms.keys():
                     resp = await self.bot.request_handler.search_mods(query=common_acronyms[query.lower()], game_id=game_id, include_adult=False)
                 if resp['total'] >= 1:  # "Total" is the number of results nexus recognized.
-                    if query.lower() in manual_exceptions.keys():
-                        search_results.append(resp['results'][manual_exceptions[query.lower()]])
-                    else:
-                        search_results.append(resp['results'][0])
+                    search_results.append(resp['results'][0])
                 else:  # If no results are found the game_id is saved and a string attached for easy recognition.
                     no_result_info = {"No results": game_id}
                     search_results.append(no_result_info)

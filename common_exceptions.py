@@ -1,13 +1,31 @@
+"""
+Copyright notice:
+Copyright (C) 2022-2023 Arbigate
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+"""
+
 manual_exceptions = {
-    'lux': 1,
-    'qui': 7,
-    'enb light': 1,
-    'sky idles': 1,
-    'nordic ui': 1,
-    'ebony knight armor': 1,
-    'animated poisons': 1,
-    'static mesh improvement mod improvement mod': 2,
-    'proteus': 1
+    'lux': [{'game_id': 1704, 'name': 'Lux', 'url': '/skyrimspecialedition/mods/43158'}, {'No results': 110}],
+    'qui': [{'game_id': 1704, 'name': 'QUI', 'url': '/skyrimspecialedition/mods/65343'}, {'No results': 110}],
+    'enb light': [{'game_id': 1704, 'name': 'ENB Light', 'url': '/skyrimspecialedition/mods/22574'}, {'game_id': 110, 'name': 'Enhanced Lighting for ENB (ELE)', 'url': '/skyrim/mods/59733'}],
+    'sky idles': [{'game_id': 1704, 'name': 'Sky Idles', 'url': '/skyrimspecialedition/mods/45794'}, {'No results': 110}],
+    'nordic ui': [{'game_id': 1704, 'name': 'NORDIC UI - Interface Overhaul', 'url': '/skyrimspecialedition/mods/49881'}, {'No results': 110}],
+    'ebony knight armor': [{'game_id': 1704, 'name': 'Ebony Knight Armor', 'url': '/skyrimspecialedition/mods/68062'}, {'game_id': 110, 'name': 'Ebony Knight Armor LE Port', 'url': '/skyrim/mods/112520'}],
+    'animated poisons': [{'game_id': 1704, 'name': 'Animated Poisons', 'url': '/skyrimspecialedition/mods/72849'}, {'game_id': 110, 'name': 'RUSTIC ANIMATED POTIONS and POISONS', 'url': '/skyrim/mods/77541'}],
+    'static mesh improvement mod improvement mod': [{'game_id': 1704, 'name': 'Static Mesh Improvement Mod Improvement Mod', 'url': '/skyrimspecialedition/mods/55543'}, {'game_id': 110, 'name': 'Static Mesh Improvement Mod Improvement Mod LE', 'url': '/skyrim/mods/110210'}],
+    'proteus': [{'game_id': 1704, 'name': 'Proteus', 'url': '/skyrimspecialedition/mods/62934'}, {'game_id': 110, 'name': 'PROJECT PROTEUS', 'url': '/skyrim/mods/106919'}]
 }
 
 false_nsfw_flagged = {
