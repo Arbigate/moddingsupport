@@ -37,50 +37,49 @@ class ModdingSupport(commands.Cog):
         embed = discord.Embed(description='[Source Code](https://github.com/Arbigate/moddingsupport)', color=0x197482)
         await ctx.send(embed=embed)
 
-    @commands.hybrid_command(name='guide', description='Beginners modding guide')
+    @commands.hybrid_command(name='guide', description='Beginner's modding guide')
     async def guide(self, ctx):
-        embed = discord.Embed(description='[Modding Guide](https://docs.google.com/document/d/1jTXnuuLZQ201rLRFw0TbxDnBDO9DqZDcCqFIJJSXCDU/edit?usp=sharing)', color=0x197482)
+        embed = discord.Embed(description='[Modding Guide](https://sites.google.com/view/skyrimsemoddingguide)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='skse', description='SKSE tutorial')
     async def skse(self, ctx):
-        embed = discord.Embed(title='SKSE Tutorial', description='Launch your game at least once. Go [here](http://skse.silverlock.org/) and download; **__MAKE SURE YOU GET THE RIGHT VERSION FOR YOUR GAME.__** \nDrag the files from the image below into your game folder, located at \n Steam/steamapps/common/Skyrim Special Edition. \n\nKeep in mind, from now on you will have to launch your game from skse_loader.exe (do not launch through Steam). If you use MO2, it will add an executable there automatically. \n\n[Video Tutorial](https://www.youtube.com/watch?v=tdiFIL_02dI)', color=0x197482)
-        embed.set_image(url='https://i.imgur.com/E2HoLOc.png')
+        embed = discord.Embed(title='SKSE Tutorial', description="The [Skyrim Script Extender](http://skse.silverlock.org/) is a tool that, well, extends Skyrim’s scripting functionality. It is absolutely essential and needed for many mods. \n\nInstallation is as simple as downloading the correct version and extracting to your game directory. The video outlines the process. \n\nFrom now on, you will launch Skyrim by launching SKSE through your mod manager. \n\n[Video Tutorial](https://youtu.be/ZuqfOw89vm0)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='ae', description='Information about AE')
     async def ae(self, ctx):
-        embed = discord.Embed(title='AE Info Board', description="The Anniversary Edition *update* was forced for ALL users, while the *upgrade* is a new DLC that includes CC content. Everyone has the AE update, which brings your game version from **1.5.97** to **1.6.640**. \n\nAny mod that uses an SKSE DLL will not work on AE unless it has been updated by the author. At this point, most mods are updated. \n\nMake sure your SKSE mods match your game version. You can check by seeing what file you downloaded, usually they will indicate AE compatibility. \n\n[SKSE Plugin Status](https://modding.wiki/en/skyrim/users/skse-plugins) \n\nIt is possible to downgrade your game (not recommended for average users). \nSee -downgrade for more info.", color=0x197482)
+        embed = discord.Embed(title='AE Info Board', description="November 11th, 2021, was Skyrim’s 10th anniversary. On that day, Bethesda released the **Anniversary Edition (AE)** update, which acts as an update to the base SSE game. Before the update, the version of the game was **1.5.97**, which we now refer to as the SE version. The current AE version is **1.6.640**. \n\nThe AE update included four free Creation Club (CC) items: [Saints & Seducers](https://en.uesp.net/wiki/Skyrim:Saints_%26_Seducers), [Rare Curios](https://en.uesp.net/wiki/Skyrim:Rare_Curios), [Survival Mode](https://en.uesp.net/wiki/Skyrim:Survival_Mode), and [Fishing](https://en.uesp.net/wiki/Skyrim:Fishing). (The Creation Club mods are mods that are officially endorsed and published by Bethesda. This acts as a "paid modding" system.) \n\nPlease note that there are multiple versions of AE. There also is the **1.6.353** version, which is older than the current 1.6.640 version. These two versions require distinction because they both require different versions of SKSE, and by extension, certain mods will not work on certain versions. \n\nIt should be noted that some mods will work on any version, and the mod author will usually state as such. Some mods will work on .353 and .640 but not .97, and some mods will work on all three. Make sure you’re reading everything. \n\nIn conclusion, there are three main versions of the game: **1.5.97 (SE)**, **1.6.353 (AE)**, and **1.6.640 (AE)**. \n\nThis is not to be confused with the Anniversary Edition *upgrade* which is an entirely separate thing. This AE upgrade is a new DLC released by Bethesda, which includes all of the CC content (not including the four free items included with the *update*) which previously had to be purchased individually. \n\nThere is a very important distinction between the AE *update* and the *upgrade*. Many users will get confused by this, so make sure you understand it. \n\nIt is possible to downgrade your game, see -downgrade for more information.", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='downgrade', description='Downgrading game tutorial')
     async def downgrade(self, ctx):
-        embed = discord.Embed(title='How to Downgrade', description='It is possible to downgrade your game from 1.6.640 to 1.5.97 for mod compatibility. This is becoming more and more obsolete as more mods get updated, but the option is still available. \n\n[Downgrade Patcher Download](https://www.nexusmods.com/skyrimspecialedition/mods/57618) \n[Instructions](https://www.youtube.com/watch?v=r2XSWUkOKz0)', color=0x197482)
+        embed = discord.Embed(title='How to Downgrade', description='If you want to use a different version of Skyrim as mentioned earlier, you will need to downgrade your game using the [downgrade patcher](https://www.nexusmods.com/skyrimspecialedition/mods/57618). We recommend the "best of both worlds" file, which lets you keep your Creation Club content intact. Remember to pay attention to the version for SKSE-based mods. \n\n[Video Tutorial](https://www.youtube.com/watch?v=r2XSWUkOKz0)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='version', description='Breaks down versions of the game')
     async def version(self, ctx):
-        embed = discord.Embed(title='What version of Skyrim should I get?', description='Legendary Edition (LE): The original version of Skyrim released in 2011, with all DLC. Oldrim refers to the base game without DLC. This version is mostly unsupported. \n\nSpecial Edition (SE): Updated version of the game, released in 2016. Includes all DLC and major graphical/engine updates. Most mods are released here, and you will get the most support for SE.', color=0x197482)
+        embed = discord.Embed(title='What version of Skyrim should I get?', description='The first is **Skyrim Legendary Edition (LE)**. This refers to the original game released in 2011. It is also called Oldrim, but there is a difference between LE and Oldrim usually; LE refers to the base game with all DLCs, while Oldrim refers to just the base 2011 version of the game. This version of the game is outdated and we do not recommend it. \n\nThe second version is **Skyrim Special Edition (SSE)** which was released in 2016. It’s a full upgrade to Legendary Edition and was released separately on Steam. SSE includes every DLC. It also includes many engine fixes and graphical upgrades. No LE mod is compatible with SE by default (save most texture mods), however, the majority can easily be ported (more on that later). This guide will be focused on SSE because it’s the most supported.', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='porting', description='Tutorial for porting mods', aliases=['converting', 'port', 'convert'])
     async def porting(self, ctx):
-        embed = discord.Embed(description="[TLO's Converting Mods Tutorial](https://docs.google.com/document/d/1V0J-j2mrmEmK0Q7ugVofEyRfa5Ugg1YZl38ikH_6NOg/edit?usp=sharing)", color=0x197482)
+        embed = discord.Embed(description="[TLO's Converting Mods Tutorial](https://sites.google.com/view/skyrimsemoddingguide/the-guide/porting-mods)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='crash', description='What to do in the event of a crash')
     async def crash(self, ctx):
-        embed = discord.Embed(title='Crash Resources', description="Use [this](https://www.nexusmods.com/skyrimspecialedition/mods/21294) mod to generate crash logs. \nUse [this](https://www.nexusmods.com/skyrimspecialedition/mods/59596) instead if you're on AE. \nUse [this](https://www.nexusmods.com/skyrimspecialedition/mods/59818) if you're on VR. \n\n[Reading SE Crash Logs Tutorial](https://docs.google.com/document/d/1Gw63VpT_PiiOXaHUeJvrjr3j9H-j-3N17ivxGA-CiTM/edit?usp=sharing) \n[Reading AE Crash Logs Tutorial](https://www.nexusmods.com/skyrimspecialedition/mods/75430) \n[Common Crashes & Fixes](https://www.nexusmods.com/skyrimspecialedition/mods/49130) \n[Troubleshooting Checklist](https://docs.google.com/document/d/1yPob0eHPlE6s_wy-ryCbqp7YuLcQTPdHhXvFOsqchss/edit?usp=sharing) \n[Stability Guide](https://www.youtube.com/watch?v=ucJkYLyRMso)", color=0x197482)
+        embed = discord.Embed(title='Crash Resources', description="Use [this](https://www.nexusmods.com/skyrimspecialedition/mods/21294) mod to generate crash logs. \nUse [this](https://www.nexusmods.com/skyrimspecialedition/mods/59818) if you're on AE or VR. \n\n[Reading SE Crash Logs Tutorial](https://docs.google.com/document/d/1Gw63VpT_PiiOXaHUeJvrjr3j9H-j-3N17ivxGA-CiTM/edit?usp=sharing) \n[Reading AE Crash Logs Tutorial](https://www.nexusmods.com/skyrimspecialedition/mods/75430) \n[Common Crashes & Fixes](https://www.nexusmods.com/skyrimspecialedition/mods/49130) \n[Troubleshooting Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/troubleshooting) \n[Stability Guide](https://www.youtube.com/watch?v=ucJkYLyRMso)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='modmanager', description='Mod manager comparison')
     async def modmanager(self, ctx):
-        embed = discord.Embed(title='What mod manager should I use?', description='[Differences Breakdown](https://docs.google.com/document/d/1tc_upWT4rLZPmShiKR7UIqr1fVq_HsRHUew9xww_5vs/edit?usp=sharing) \n[MO2 Download](https://www.nexusmods.com/skyrimspecialedition/mods/6194) \n[Vortex Download](https://www.nexusmods.com/about/vortex/) \n\nYou may see a lot of references to “Nexus Mod Manager” or NMM. DO NOT USE NMM. Not only is it no longer officially maintained or even supported by modern tools, it is known to directly modify game files and lacks essential features.', color=0x197482)
+        embed = discord.Embed(title='What mod manager should I use?', description='[Differences Breakdown](https://sites.google.com/view/skyrimsemoddingguide/the-guide/setup-workspace#h.cx65j1g77zn) \n[MO2 Download](https://www.nexusmods.com/skyrimspecialedition/mods/6194) \n[Vortex Download](https://www.nexusmods.com/about/vortex/) \n\nYou may see a lot of references to “Nexus Mod Manager”, or NMM. **DO NOT USE NMM.** Not only is it no longer officially maintained or even supported by modern tools, but it lacks many essential features and is known to directly modify game files.', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='reinstall', description='How to correctly reinstall the game')
     async def reinstall(self, ctx):
-        embed = discord.Embed(description='[Clean Reinstall Tutorial](https://www.youtube.com/watch?v=zQ5uNCKOKmI)', color=0x197482)
+        embed = discord.Embed(description='[Clean Reinstall Tutorial](https://youtu.be/zQ5uNCKOKmI)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='laws', description='10 commandments of modding')
@@ -90,12 +89,12 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='nemesis', description='Tutorial for Nemesis engine')
     async def nemesis(self, ctx):
-        embed = discord.Embed(title='Nemesis Unlimited Behavior Engine', description="Nemesis is the modern replacement for FNIS. It is essentially the same thing, you don't need FNIS at all if you use Nemesis. It will even generate an empty FNIS.esp for compatibility. The only thing it doesn't support are creature animations. \n\n[Download](https://www.nexusmods.com/skyrimspecialedition/mods/60033) \n[Instructions](https://www.youtube.com/watch?v=ki2bghy2Mvo) \n[Instructions for Vortex](https://www.youtube.com/watch?v=W9hrvc8ync4) \n*Please keep in mind that these tutorials use Nemesis from GitHub; you can now just download from Nexus and install through your mod manager normally, then pick up from there.* \n\nWhitelist Nemesis in your antivirus/turn off real time protection if you have issues. Also make sure you are installing mods for the correct version of your game.", color=0x197482)
+        embed = discord.Embed(title='Nemesis Unlimited Behavior Engine', description='[Nemesis](https://www.nexusmods.com/skyrimspecialedition/mods/60033) is a modern replacement for Fore’s New Idles in Skyrim, or FNIS, a tool that allows for custom animation and behavior generation. You may see some mods requiring FNIS: FNIS is no longer needed. __All FNIS mods work with Nemesis__ and it will even generate an empty FNIS.esp for compatibility. The only thing Nemesis currently doesn’t support is creature animations. If you look for support with FNIS, you will most likely be redirected to Nemesis. [Here is a more in-depth comparison between the two.](https://www.youtube.com/watch?v=99OvhVogJ7c) \n\nNemesis is fairly simple to use and takes just a few clicks. Launch the program through your mod manager, check ONLY the mods you have installed, click "update", and then "launch". Please refer to the video. \n\n[Video Tutorial](https://youtu.be/nB1-Z6RboxQ) \n\nWhitelist Nemesis in your antivirus/turn off real time protection if you have issues. Also make sure you are installing mods for the correct version of your game.', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='dyndolod', description='Tutorial for DynDOLOD')
     async def dyndolod(self, ctx):
-        embed = discord.Embed(title='DynDOLOD Guide', description='[Guide by Kiloee & Geborgen](https://docs.google.com/document/d/1n1Bqh1a2kD_Kgg8Hfxc3GZtpYMORP6lYg76kWwP4rOo/edit?usp=sharing) \n[Video Tutorial](https://www.youtube.com/watch?v=encZYHEeQrQ)', color=0x197482)
+        embed = discord.Embed(title='DynDOLOD Guide', description='[Basic Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/all-about-lod) \n[Advanced Guide](https://sites.google.com/view/skyrimsemoddingguide/advanced-topics/advanced-lod-guide)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='cleaning', description='Tutorial for xEdit plugin cleaning')
@@ -115,12 +114,12 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='vanillastart', description='How to fix broken vanilla intro')
     async def vanillastart(self, ctx):
-        embed = discord.Embed(title='Broken Vanilla Intro Fix', description='Use [this](https://www.nexusmods.com/skyrimspecialedition/mods/272) mod to make your character, then wait a few minutes and let your scripts load. Then select vanilla start. \n\nAdditionally, try [this](https://www.nexusmods.com/skyrimspecialedition/mods/8004) fix.', color=0x197482)
+        embed = discord.Embed(title='Broken Vanilla Intro Fix', description='Use [Alternate Start - Live Another Life](https://www.nexusmods.com/skyrimspecialedition/mods/272) to make your character, then wait a minute or so and let your scripts load. Then select vanilla start. \n\nAdditionally, try [this](https://www.nexusmods.com/skyrimspecialedition/mods/8004) fix. \n\nSome other alternate start mods are [Skyrim Unbound Reborn](https://www.nexusmods.com/skyrimspecialedition/mods/27962), [Realm of Lorkhan](https://www.nexusmods.com/skyrimspecialedition/mods/18223), and [Optional Quick Start](https://www.nexusmods.com/skyrimspecialedition/mods/63953).', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='darkface', description='Dark face bug fix')
     async def name(self, ctx):
-        embed = discord.Embed(title="Dark Face Bug Fix", description="[Info Board](https://www.reddit.com/r/skyrimmods/comments/n6gio6/guide_the_dark_face_bug_and_what_causes_it_and/) \n\n[Face Discoloration Fix Download](https://www.nexusmods.com/skyrimspecialedition/mods/42441) \n*Please note that this only fixes the dark tint, and doesn't fix the actual facegen issue.* \n\n[EasyNPC Download](https://www.nexusmods.com/skyrimspecialedition/mods/52313) \n*This tool will merge all of your face data into one plugin.*", color=0x197482)
+        embed = discord.Embed(title="Dark Face Bug Fix", description="[Info Board](https://sites.google.com/view/skyrimsemoddingguide/advanced-topics/facegen-the-dark-face-bug) \n\n[Face Discoloration Fix Download](https://www.nexusmods.com/skyrimspecialedition/mods/42441) \n*Please note that this only fixes the dark tint, and doesn't fix the actual facegen issue.* \n\n[EasyNPC Download](https://www.nexusmods.com/skyrimspecialedition/mods/52313) \n*This tool will merge all of your face data into one plugin.*", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='loadorder', description='Load order resources', aliases=['loot'])
@@ -128,9 +127,19 @@ class ModdingSupport(commands.Cog):
         embed = discord.Embed(title='Load Order Resources', description='[LOOT Download](https://loot.github.io/) \n[LOOT Basic Tutorial](https://www.youtube.com/watch?v=fyvwslyKiog) \n\n[Load Order Basics](https://www.youtube.com/watch?v=Ncv_FWQUw0k)\n[Load Order Structure Info](https://skyrimseblog.wordpress.com/load-order-structure/)', color=0x197482)
         await ctx.send(embed=embed)
 
+    @commands.hybrid_command(name='performance', description='Guide to increase performance')
+    async def modlimit(self, ctx):
+        embed = discord.Embed(description='[Performance Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/performance)', color=0x197482)
+        await ctx.send(embed=embed)
+
+    @commands.hybrid_command(name='patching', description='Guide for patching mods')
+    async def modlimit(self, ctx):
+        embed = discord.Embed(description='[Patching Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/patching)', color=0x197482)
+        await ctx.send(embed=embed)
+
     @commands.hybrid_command(name='corrupt', description='Corrupted game save resources', aliases=['fallrim'])
     async def corrupt(self, ctx):
-        embed = discord.Embed(title='Save Corruption Resources', description='When playing a modded game, **always** make frequent saves that **are not** quick or autosaves. **Do not** save during heavy script load areas e.g. combat. **Do not** delete old saves. \n\n[FallrimTools](https://www.nexusmods.com/skyrimspecialedition/mods/5031) \nREAD THE MOD PAGE', color=0x197482)
+        embed = discord.Embed(title='Save Corruption Resources', description='When playing a modded game, **always** make frequent saves that **are not** quick or autosaves. **Do not** save during heavy script load areas e.g. combat. **Do not** delete old saves. \n\n[FallrimTools](https://www.nexusmods.com/skyrimspecialedition/mods/5031) \n*READ THE MOD PAGE*', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='essentials', description='List of essential mods')
@@ -140,22 +149,22 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='script', description='Script info board')
     async def script(self, ctx):
-        embed = discord.Embed(description="[Monitor's Script Info Board](https://docs.google.com/document/d/1JdpbjIjIJq_kdr6mC43pVjfyaWngWWBwGRDc-6SkBcc/edit?usp=sharing)", color=0x197482)
+        embed = discord.Embed(description="[Monitor's Script Info Board](https://sites.google.com/view/skyrimsemoddingguide/advanced-topics/script-heavy-mods)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='modlimit', description='Mod limit info board')
     async def modlimit(self, ctx):
-        embed = discord.Embed(description='[255 Mod Limit for SE/AE Info by Monitor](https://docs.google.com/document/d/1YQFOtjXTqq-0EC0OFPcKZBV5a-ljt1zklXWrfBgXAsc/edit?usp=sharing)', color=0x197482)
+        embed = discord.Embed(description='[255 Mod Limit for SE/AE Info by Monitor](https://sites.google.com/view/skyrimsemoddingguide/advanced-topics/255-plugin-limit)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='enb', description='ENB info board')
     async def enb(self, ctx):
-        embed = discord.Embed(title="ENB Info Board", description="An ENB is, essentially, a complete replacement of the game's lighting and shaders, *in addition* to any weather or lighting mods you might have installed. Two different presets can change the aesthetic of a game drastically; you should choose wisely and find one suited to your weather mod and/or game aesthetic. Do you want fairytale fantasy? Real life? Dark Souls? There’s a preset for every visual persuasion. \n\nEvery ENB has installation instructions on the mod page. You should know the basic steps however; download the most recent ENB binaries [here](http://enbdev.com/download_mod_tesskyrimse.htm) and extract ONLY the two .DLL files in the WrapperVersion folder to your game directory. Then download the preset of your choice and extract to your game directory. \n\n[ENB Settings Breakdown](https://stepmodifications.org/wiki/Guide:ENBSeries_INI)", color=0x197482)
+        embed = discord.Embed(title="ENB Info Board", description="An ENB is, essentially, a complete replacement of the game's lighting and shaders, in addition to any weather or lighting mods you might have installed. Two different presets can change the aesthetic of a game drastically; you should choose wisely and find one suited to your weather mod and/or game aesthetic. Do you want fairytale fantasy? Real life? Dark Souls? There’s a preset for every visual persuasion. \n\n[ENB Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/enb-reshade) \n\n[ENB Settings Breakdown](https://stepmodifications.org/wiki/Guide:ENBSeries_INI)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='ini', description='Ini resources')
     async def ini(self, ctx):
-        embed = discord.Embed(title='INI Resources', description='[INI Settings Breakdown](https://stepmodifications.org/wiki/Guide:Skyrim_Configuration_Settings#SkyrimPrefs.ini) \n[BethINI Download](https://www.nexusmods.com/skyrimspecialedition/mods/4875) \n*Instructions for BethINI are on the mod page.*', color=0x197482)
+        embed = discord.Embed(title='INI Resources', description='[INI Settings Breakdown](https://stepmodifications.org/wiki/Guide:Skyrim_Configuration_Settings#SkyrimPrefs.ini) \n[BethINI Download](https://www.nexusmods.com/skyrimspecialedition/mods/4875) \nBethINI Video Tutorial](https://www.youtube.com/watch?v=NI8ezwpZQFw) \nMake sure you set your .INI path correctly in the setup tab, pointing toward your MO2 profile, or else your changes won’t take effect. This is due to MO2’s Virtual File System (VFS) which uses its own version of Skyrim’s .INIs, instead of the default ones in documents.', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='modlist', description='Modlist sharing resources')
@@ -228,7 +237,7 @@ class HelpCommand(commands.DefaultHelpCommand):
     def __init__(self):
         super().__init__()
         self.page_number = 0
-        self.help_body = ["-guide (beginner's modding guide) \n-skse (SKSE tutorial) \n-ae (information about AE) \n-downgrade (downgrading game tutorial) \n-version (breaks down the versions of the game) \n-porting / -converting (tutorial for porting mods) \n-crash (what to do in the event of a crash) \n-modmanager (mod manager comparison) \n-reinstall (how to correctly reinstall the game) \n-laws (10 Commandments of Modding™️)", "-nemesis (tutorial for Nemesis engine) \n-dyndolod (tutorial for DynDOLOD) \n-cleaning (xEdit plugin cleaning) \n-navmesh (fixing deleted navmesh) \n-eslify (ESL flagging plugins) \n-vanillastart (broken vanilla intro fix) \n-darkface (dark face bug fix) \n-loadorder / -loot (load order resources) \n-corrupt / -fallrim (corrupted save game resources)", "-essentials (list of essential mods) \n-script (script info board) \n-modlimit (mod limit info board) \n-enb (ENB info board) \n-ini (ini resources) \n-modlist (modlist sharing resources) \n-ussep (link to USSEP) \n-tudm (link to TUDM) \n-synthesis (link to Synthesis patcher) \n-xbox (Xbox mod recommendations) \n-ps4 (PlayStation mod recommendations)", "-sinitar (essay on Sinitar) \n-sos (returns a random 'SOS' mod) \n-gamepass (SKSE does not work with it) \n-rtfm (read the [redacted] manual) \n-tryitandsee (please do this) \n-dontasktoask (seriously, just ask your question) \n-stefan (ignore him) \n-source (links bot source code) \n/link (links mods, separate multiple with commas) \n/suggest-acronym (requests acronym to be added to mod linking", "/attack (attacks the Augur of Dunlain bot) \n/damage-leaderboard (shows top 10 attackers against Augur of Dunlain) \n/check-damage (checks how much damage has been done to Augur of Dunlain)"]
+        self.help_body = ["-guide (beginner's modding guide) \n-skse (SKSE tutorial) \n-ae (information about AE) \n-downgrade (downgrading game tutorial) \n-version (breaks down the versions of the game) \n-porting / -converting (tutorial for porting mods) \n-crash (what to do in the event of a crash) \n-modmanager (mod manager comparison) \n-reinstall (how to correctly reinstall the game) \n-laws (10 Commandments of Modding™️)", "-nemesis (tutorial for Nemesis engine) \n-dyndolod (tutorial for DynDOLOD) \n-cleaning (xEdit plugin cleaning) \n-navmesh (fixing deleted navmesh) \n-eslify (ESL flagging plugins) \n-vanillastart (broken vanilla intro fix) \n-darkface (dark face bug fix) \n-loadorder / -loot (load order resources \n-performance (performance guide) \n-patching (patching guide) \n-corrupt / -fallrim (corrupted save game resources)", "-essentials (list of essential mods) \n-script (script info board) \n-modlimit (mod limit info board) \n-enb (ENB info board) \n-ini (ini resources) \n-modlist (modlist sharing resources) \n-ussep (link to USSEP) \n-tudm (link to TUDM) \n-synthesis (link to Synthesis patcher) \n-xbox (Xbox mod recommendations) \n-ps4 (PlayStation mod recommendations)", "-sinitar (essay on Sinitar) \n-sos (returns a random 'SOS' mod) \n-gamepass (SKSE does not work with it) \n-rtfm (read the [redacted] manual) \n-tryitandsee (please do this) \n-dontasktoask (seriously, just ask your question) \n-stefan (ignore him) \n-source (links bot source code) \n/link (links mods, separate multiple with commas) \n/suggest-acronym (requests acronym to be added to mod linking", "/attack (attacks the Augur of Dunlain bot) \n/damage-leaderboard (shows top 10 attackers against Augur of Dunlain) \n/check-damage (checks how much damage has been done to Augur of Dunlain)"]
 
     async def send_bot_help(self, mapping: Mapping[Optional[commands.Cog], List[commands.Command]]):
         view = HelpButtons(HelpCommand())
