@@ -37,7 +37,7 @@ class ModdingSupport(commands.Cog):
         embed = discord.Embed(description='[Source Code](https://github.com/Arbigate/moddingsupport)', color=0x197482)
         await ctx.send(embed=embed)
 
-    @commands.hybrid_command(name='guide', description='Beginner's modding guide')
+    @commands.hybrid_command(name='guide', description="Beginner's modding guide")
     async def guide(self, ctx):
         embed = discord.Embed(description='[Modding Guide](https://sites.google.com/view/skyrimsemoddingguide)', color=0x197482)
         await ctx.send(embed=embed)
