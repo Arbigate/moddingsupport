@@ -128,12 +128,12 @@ class ModdingSupport(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='performance', description='Guide to increase performance')
-    async def modlimit(self, ctx):
+    async def performance(self, ctx):
         embed = discord.Embed(description='[Performance Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/performance)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='patching', description='Guide for patching mods')
-    async def modlimit(self, ctx):
+    async def patching(self, ctx):
         embed = discord.Embed(description='[Patching Guide](https://sites.google.com/view/skyrimsemoddingguide/the-guide/patching)', color=0x197482)
         await ctx.send(embed=embed)
 
