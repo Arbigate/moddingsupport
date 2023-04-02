@@ -39,6 +39,7 @@ The prefix is ``-`` and is currently unchangeable. All text commands are also av
    * -vanillastart (broken vanilla intro fix)
    * -darkface (dark face bug fix)
    * -loadorder / -loot (load order resources)
+   * -cycle (cyclic interaction information)
    * -performance (performance guide)
    * -patching (patching guide)
    * -corrupt / -fallrim (corrupted save game resources)
