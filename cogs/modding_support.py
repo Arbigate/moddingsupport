@@ -124,7 +124,7 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='loadorder', description='Load order resources', aliases=['loot'])
     async def loadorder(self, ctx):
-        embed = discord.Embed(title='Load Order Resources', description='[LOOT Download](https://loot.github.io/) \n[LOOT Basic Tutorial](https://www.youtube.com/watch?v=fyvwslyKiog) \n\n[Load Order Basics](https://www.youtube.com/watch?v=Ncv_FWQUw0k)\n[Load Order Structure Info](https://skyrimseblog.wordpress.com/load-order-structure/)', color=0x197482)
+        embed = discord.Embed(title='Load Order Resources', description='[LOOT Download](https://loot.github.io/) \n[LOOT Basic Tutorial](https://www.youtube.com/watch?v=fyvwslyKiog) \n\n[Load Order Basics](https://www.youtube.com/watch?v=Ncv_FWQUw0k)\n[Load Order Structure Info](https://sites.google.com/view/skyrimsemoddingguide/the-guide/load-order?authuser=0)', color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='cycle', description='Cyclic interaction information', aliases=['cycles'])
@@ -170,7 +170,7 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='ini', description='Ini resources')
     async def ini(self, ctx):
-        embed = discord.Embed(title='INI Resources', description="[INI Settings Breakdown](https://stepmodifications.org/wiki/Guide:Skyrim_Configuration_Settings#SkyrimPrefs.ini) \n[BethINI Download](https://www.nexusmods.com/skyrimspecialedition/mods/4875) \nBethINI Video Tutorial](https://www.youtube.com/watch?v=NI8ezwpZQFw) \nMake sure you set your .INI path correctly in the setup tab, pointing toward your MO2 profile, or else your changes won’t take effect. This is due to MO2’s Virtual File System (VFS) which uses its own version of Skyrim’s .INIs, instead of the default ones in documents.", color=0x197482)
+        embed = discord.Embed(title='INI Resources', description="[INI Settings Breakdown](https://stepmodifications.org/wiki/Guide:Skyrim_Configuration_Settings#SkyrimPrefs.ini) \n[BethINI Download](https://www.nexusmods.com/skyrimspecialedition/mods/4875) \n[BethINI Video Tutorial](https://www.youtube.com/watch?v=NI8ezwpZQFw) \nMake sure you set your .INI path correctly in the setup tab, pointing toward your MO2 profile, or else your changes won’t take effect. This is due to MO2’s Virtual File System (VFS) which uses its own version of Skyrim’s .INIs, instead of the default ones in documents.", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='modlist', description='Modlist sharing resources')
