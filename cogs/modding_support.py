@@ -39,7 +39,7 @@ class ModdingSupport(commands.Cog):
 
     @commands.hybrid_command(name='guide', description="Beginner's modding guide")
     async def guide(self, ctx):
-        embed = discord.Embed(description='[Modding Guide](https://sites.google.com/view/skyrimsemoddingguide)', color=0x197482)
+        embed = discord.Embed(description="[Our Modding Guide](https://sites.google.com/view/skyrimsemoddingguide) \n[Phoenix's Beginner's Guide](https://thephoenixflavour.com/bg/)", color=0x197482)
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(name='skse', description='SKSE tutorial')
