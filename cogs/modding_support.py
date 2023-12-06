@@ -238,6 +238,11 @@ class ModdingSupport(commands.Cog):
     async def ping(self, ctx):
         await ctx.send(f':ping_pong: Pong! Bot latency is ``{round(self.bot.latency*1000)} ms``')
 
+    @commands.hybrid_command(name='newupdate', description="Newest update information")
+    async def newupdate(self, ctx):
+        embed = discord.Embed(title='Newest Update Information', description='On December 5 2023, after several days of maintenance on the Creation Club, Bethesda released an update for the game introducing a new "modding marketplace" system. This is different from CC, and allows authors to get verified by Bethesda to sell their mods on this new marketplace. \n\nThis update to the game executable brings the Steam version from 1.6.640 to 1.6.1130. SKSE has updated, and Address Library has as well, but many SKSE mods still need to be updated anyway. \n\nTo avoid the update, you should [disable automatic updates in Steam](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable) and then launch the game through SKSE loader/your mod manager as usual. If you do update, you can [use the downgrade patcher](https://www.nexusmods.com/skyrimspecialedition/mods/57618) (best of both worlds file for 1.6.640 is at the top of old files). We recommend avoiding the update until SKSE plugins settle down.', color=0x197482)
+        await ctx.send(embed=embed)
+
 
 class HelpCommand(commands.DefaultHelpCommand):
     def __init__(self):
